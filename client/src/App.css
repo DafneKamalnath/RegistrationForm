@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background: #fffafc;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background */
+
+.background-circle {
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.circle-one {
+  width: 300px;
+  height: 300px;
+  background: #ffdce8;
+  top: -130px;
+  left: -100px;
+}
+
+.circle-two {
+  width: 350px;
+  height: 350px;
+  background: #e8dcff;
+  bottom: -180px;
+  right: -100px;
+}
+
+/* Main card */
+
+.registration-card {
+  position: relative;
+  z-index: 1;
+
+  width: min(950px, 100%);
+  margin: auto;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 60px rgba(70, 50, 90, 0.12);
+}
+
+/* Header */
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.user-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: auto;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dcd1ff;
+
+  font-size: 32px;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 36px;
+
+  color: #30264d;
+}
+
+.header p {
+  color: #77728a;
+  font-size: 16px;
+}
+
+/* Field layout */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Individual field */
+
+.field-box {
+  padding: 20px;
+
+  border-radius: 18px;
+
+  margin-bottom: 20px;
+
+  transition: 0.2s ease;
+}
+
+.field-box:hover {
+  transform: translateY(-2px);
+}
+
+/* Pastel colors */
+
+.pink {
+  background: #ffe5ee;
+}
+
+.blue {
+  background: #e1f0ff;
+}
+
+.purple {
+  background: #eee5ff;
+}
+
+.yellow {
+  background: #fff5d9;
+}
+
+.green {
+  background: #e3f8e9;
+}
+
+.lavender {
+  background: #e9e3ff;
+}
+
+.mint {
+  background: #def8ed;
+}
+
+.peach {
+  background: #ffeadc;
+}
+
+.pink-light {
+  background: #ffeaf5;
+}
+
+/* Labels */
+
+.field-box label {
+  display: block;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #30264d;
+
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+
+.field-box input,
+.field-box select,
+.field-box textarea {
+  width: 100%;
+
+  border: 2px solid rgba(100, 90, 120, 0.12);
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 12px;
+
+  padding: 13px 15px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  transition: 0.2s ease;
+}
+
+.field-box input:focus,
+.field-box select:focus,
+.field-box textarea:focus {
+  border-color: #8b75d6;
+
+  box-shadow:
+    0 0 0 4px rgba(139, 117, 214, 0.12);
+}
+
+.field-box textarea {
+  resize: vertical;
+}
+
+/* Error */
+
+.error {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #d93030;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* Valid */
+
+.valid {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #238636;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* Digit counter */
+
+.counter {
+  text-align: right;
+
+  margin-top: 5px;
+
+  color: #77728a;
+
+  font-size: 12px;
+}
+
+/* Success */
+
+.success-message {
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+
+  background: #dff7e6;
+
+  color: #19733a;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* Server error */
+
+.server-error {
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+
+  background: #ffe1e1;
+
+  color: #b42323;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* Red confirmation button */
+
+.submit-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 17px;
+
+  background: #e63946;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  box-shadow:
+    0 8px 20px rgba(230, 57, 70, 0.25);
+}
+
+.submit-button:hover {
+  background: #c92f3b;
+
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .page {
+    padding: 20px 12px;
+  }
+
+  .registration-card {
+    padding: 22px 16px;
+
+    border-radius: 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .field-box {
+    padding: 16px;
+  }
+}
